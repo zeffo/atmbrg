@@ -1,0 +1,11 @@
+[package]
+name = "atmbrg"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+crossterm = "0.29.0"
+ratatui = "0.29.0"
+reqwest =  { version = "0.12.23", features = ["json"] }
+serde = "1.0.226"
+serde_json = "1.0.145"
