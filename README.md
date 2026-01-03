@@ -1,7 +1,8 @@
 # atmbrg
 
-Atomberg fan control TUI
+## Atomberg fan control CLI
 
+**WIP**, currently supports only the LAN API.
 
 ## supported devices
 
