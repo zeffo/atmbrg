@@ -23,6 +23,7 @@ pub struct InvalidCommandError {
     message: String,
 }
 
+#[allow(dead_code)]
 impl InvalidCommandError {
     pub fn new(message: &str) -> Self {
         Self {
