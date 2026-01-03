@@ -11,7 +11,9 @@ use crate::{
 };
 
 // use crate::api::send_command;
+  
 
+/// Atomberg Fan Control
 #[derive(Parser, Debug)]
 #[command(version, about, long_about=None)]
 struct Args {
@@ -23,15 +25,25 @@ struct Args {
 
 #[derive(clap::Subcommand, Debug, Clone)]
 enum CLICommand {
+    /// Turn a fan on or off.
     Power { toggle: Toggle },
+    /// Set the speed of a fan.
     Speed { value: u8 },
+    /// Set the relative speed of a fan.
     SpeedDelta { delta: i8 },
+    /// Toggle a fan's sleep mode.
     Sleep { toggle: Toggle },
+    /// Set a fan's timer.
     Timer { timer: Timer },
+    /// Turn a fan's LED on or off.
     Led { toggle: Toggle },
+    /// Set the brightness of a fan's LED.
     Brightness { value: i8 },
+    /// Set the relative brightness of a fan's LED.
     BrightnessDelta { delta: u8 },
+    /// Set the color of a fan's LED.
     Color { color: Color },
+    /// Scan for and return the first atomberg device found.
     ScanOne,
 }
 
